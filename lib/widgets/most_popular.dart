@@ -35,7 +35,7 @@ class MostPopular extends StatelessWidget {
                       child: Text(travel.name,
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 15,
+                            fontSize: 20,
                           ))),
                 ]))
           ],
