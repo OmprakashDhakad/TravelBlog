@@ -16,7 +16,7 @@ class TravelBlogCard extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(right: 20.0, bottom: 10.0),
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(5),
+                borderRadius: BorderRadius.circular(10),
                 child: Image.asset(
                   travel.url,
                   width: MediaQuery.of(context).size.width,
