@@ -6,9 +6,20 @@ class MostPopular extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
+      scrollDirection: Axis.horizontal,
       itemBuilder: (context, index) {
         var travel = _list[index];
-        return Stack();
+        return Stack(
+          children: [
+            ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                child: Image.asset(
+                  travel.url,
+                  width: 140,
+                  fit: BoxFit.cover,
+                ))
+          ],
+        );
       },
       separatorBuilder: (_, index) => SizedBox(width: 15),
       itemCount: _list.length,
