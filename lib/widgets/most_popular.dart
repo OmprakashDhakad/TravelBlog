@@ -6,6 +6,7 @@ class MostPopular extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
+      padding: EdgeInsets.only(left: 15, right: 15, bottom: 15),
       scrollDirection: Axis.horizontal,
       itemBuilder: (context, index) {
         var travel = _list[index];
