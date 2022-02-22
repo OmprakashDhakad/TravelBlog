@@ -9,6 +9,7 @@ class TravelBlogCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return PageView.builder(
       controller: _pageCtrl,
+      itemCount: _list.length,
       itemBuilder: (context, index) {
         var travel = _list[index];
         return Stack(
