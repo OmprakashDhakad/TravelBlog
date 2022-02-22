@@ -48,15 +48,18 @@ class TravelBlogCard extends StatelessWidget {
               ]),
             ),
             Positioned(
-                bottom: 0,
-                right: 30,
-                child: Container(
-                    width: 60,
-                    height: 60,
-                    decoration: BoxDecoration(
-                      color: Colors.deepOrange,
-                      borderRadius: BorderRadius.circular(30),
-                    ))),
+              bottom: 0,
+              right: 30,
+              child: Container(
+                width: 60,
+                height: 60,
+                decoration: BoxDecoration(
+                  color: Colors.deepOrange,
+                  borderRadius: BorderRadius.circular(30),
+                ),
+                child: Icon(Icons.arrow_forward_ios),
+              ),
+            ),
           ],
         );
       },
