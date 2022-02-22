@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:app/model/travel.dart';
 
@@ -24,6 +25,30 @@ class TravelBlogCard extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
               ),
+            ),
+            Positioned(
+              bottom: 80,
+              left: 15,
+              child: Column(children: [
+                Material(
+                    color: Colors.transparent,
+                    child: Text(
+                      travel.location,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                      ),
+                    )),
+                Material(
+                    color: Colors.transparent,
+                    child: Text(
+                      travel.name,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 30,
+                      ),
+                    )),
+              ]),
             )
           ],
         );
