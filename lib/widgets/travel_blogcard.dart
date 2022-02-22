@@ -57,7 +57,7 @@ class TravelBlogCard extends StatelessWidget {
                   color: Colors.deepOrange,
                   borderRadius: BorderRadius.circular(30),
                 ),
-                child: Icon(Icons.arrow_forward_ios),
+                child: Icon(Icons.arrow_forward_ios, color: Colors.white),
               ),
             ),
           ],
