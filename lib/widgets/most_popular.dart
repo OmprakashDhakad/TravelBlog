@@ -5,6 +5,13 @@ class MostPopular extends StatelessWidget {
   final _list = Travel.generateMostPopular();
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return ListView.separated(
+      itemBuilder: (context, index) {
+        var travel = _list[index];
+        return Stack();
+      },
+      separatorBuilder: (_, index) => SizedBox(width: 15),
+      itemCount: _list.length,
+    );
   }
 }
