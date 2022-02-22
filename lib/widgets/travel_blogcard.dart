@@ -48,7 +48,7 @@ class TravelBlogCard extends StatelessWidget {
               ]),
             ),
             Positioned(
-              bottom: 0,
+              bottom: -10,
               right: 30,
               child: Container(
                 width: 60,
