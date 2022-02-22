@@ -27,7 +27,7 @@ class TravelBlogCard extends StatelessWidget {
               ),
             ),
             Positioned(
-              bottom: 80,
+              bottom: 60,
               left: 15,
               child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                 Material(
