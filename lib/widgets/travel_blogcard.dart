@@ -29,7 +29,7 @@ class TravelBlogCard extends StatelessWidget {
             Positioned(
               bottom: 80,
               left: 15,
-              child: Column(children: [
+              child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                 Material(
                     color: Colors.transparent,
                     child: Text(
@@ -43,10 +43,7 @@ class TravelBlogCard extends StatelessWidget {
                     color: Colors.transparent,
                     child: Text(
                       travel.name,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 30,
-                      ),
+                      style: TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.bold),
                     )),
               ]),
             )
