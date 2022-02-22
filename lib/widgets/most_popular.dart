@@ -22,7 +22,7 @@ class MostPopular extends StatelessWidget {
             Positioned(
                 bottom: 20,
                 left: 15,
-                child: Column(children: [
+                child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                   Material(
                       color: Colors.transparent,
                       child: Text(travel.location,
