@@ -19,14 +19,15 @@ class DetailPage extends StatelessWidget {
   }
 
   Widget _buildSilverHead() {
-    return SliverPersistentHeader(delegate: DetaileSliverDelegate(travel: travel, expandedHeight: expandedHeight));
+    return SliverPersistentHeader(delegate: DetaileSliverDelegate(travel: travel, expandedHeight: expandedHeight, roundedContainerHeight: roundedContainerHeight));
   }
 }
 
 class DetaileSliverDelegate extends SliverPersistentHeaderDelegate {
   final Travel travel;
   final double expandedHeight;
-  DetaileSliverDelegate({required this.travel, required this.expandedHeight});
+  final double roundedContainerHeight;
+  DetaileSliverDelegate({required this.travel, required this.expandedHeight, required this.roundedContainerHeight});
 
   @override
   Widget build(BuildContext context, double shrinkOffset, bool overlapsContent) {
