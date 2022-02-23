@@ -3,6 +3,6 @@ import 'package:flutter/material.dart';
 class DetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(child: Text("DetailPage"));
+    return Scaffold(body: Container(child: Text("DetailPage")));
   }
 }
