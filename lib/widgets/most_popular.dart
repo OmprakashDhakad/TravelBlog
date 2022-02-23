@@ -14,7 +14,7 @@ class MostPopular extends StatelessWidget {
         var travel = _list[index];
         return GestureDetector(
           onTap: () {
-            Navigator.of(context).push(MaterialPageRoute(builder: (context) => DetailPage()));
+            Navigator.of(context).push(MaterialPageRoute(builder: (context) => DetailPage(travel: travel)));
           },
           child: Stack(
             children: [
