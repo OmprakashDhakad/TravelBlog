@@ -43,7 +43,14 @@ class DetaileSliverDelegate extends SliverPersistentHeaderDelegate {
             height: roundedContainerHeight,
             decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.only(topLeft: Radius.circular(30), topRight: Radius.circular(30))),
           ),
-        )
+        ),
+        Positioned(
+            top: expandedHeight - shrinkOffset - 120,
+            left: 30,
+            child: Column(children: [
+              Text(travel.name),
+              Text(travel.location)
+            ]))
       ],
     );
   }
