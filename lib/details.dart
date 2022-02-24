@@ -60,7 +60,7 @@ class DetailPage extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15),
-            child: Row(children: [
+            child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
               Text('Featured', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, letterSpacing: 1.5)),
               Text('View all', style: TextStyle(color: Colors.deepOrange, fontSize: 16)),
             ]),
