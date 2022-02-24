@@ -47,7 +47,7 @@ class DetaileSliverDelegate extends SliverPersistentHeaderDelegate {
         Positioned(
             top: expandedHeight - shrinkOffset - 120,
             left: 30,
-            child: Column(children: [
+            child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               Text(travel.name, style: TextStyle(color: Colors.white, fontSize: 30)),
               Text(travel.location, style: TextStyle(color: Colors.white, fontSize: 20))
             ]))
