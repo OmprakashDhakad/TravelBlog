@@ -54,12 +54,13 @@ class DetailPage extends StatelessWidget {
         color: Colors.white,
         child: Column(children: [
           _buildUserInfo(),
+          Text('In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before the final copy is', style: TextStyle(color: Colors.grey, fontSize: 16))
         ]));
   }
 
   Widget _buildUserInfo() {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 10),
+      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
       child: Row(children: [
         ClipRRect(
           borderRadius: BorderRadius.circular(50),
