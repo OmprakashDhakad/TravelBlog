@@ -5,8 +5,8 @@ import 'model/travel.dart';
 class DetailPage extends StatelessWidget {
   final Travel travel;
   final double expandedHeight = 300;
-  final double roundedContainerHeight;
-  DetailPage({required this.travel, this.roundedContainerHeight});
+  final double roundedContainerHeight = 50;
+  DetailPage({required this.travel});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
