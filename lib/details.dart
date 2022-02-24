@@ -100,6 +100,7 @@ class FeaturedWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
+      padding: EdgeInsets.only(left: 20),
       scrollDirection: Axis.horizontal,
       itemBuilder: (context, index) {
         var travel = _list[index];
