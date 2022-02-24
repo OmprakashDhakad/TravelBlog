@@ -66,8 +66,8 @@ class DetailPage extends StatelessWidget {
             ]),
           ),
           SizedBox(
-            height : 120,
-            child : FeaturedWidget(),
+            height: 120,
+            child: FeaturedWidget(),
           )
         ]));
   }
@@ -96,16 +96,16 @@ class DetailPage extends StatelessWidget {
 
 class FeaturedWidget extends StatelessWidget {
   final _list = Travel.generateMostPopular();
-  
+
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
       scrollDirection: Axis.horizontal,
-      itemBuilder : (context, index) {
-        var travel = _list[index],
-        return Container(height: 100,width :120,child : Image.asset(travel.url,fit:BoxFit.cover));
+      itemBuilder: (context, index) {
+        var travel = _list[index];
+        return Container(height: 100, width: 120, child: Image.asset(travel.url, fit: BoxFit.cover));
       },
-      separatorBuilder: (_,index) => SizedBox(width :10),
+      separatorBuilder: (_, index) => SizedBox(width: 10),
       itemCount: _list.length,
     );
   }
