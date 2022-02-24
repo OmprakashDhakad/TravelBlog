@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:app/model/travel.dart';
+//import 'package:app/model/travel.dart';
 import '../details.dart';
+import '/root/app/lib/model/travel.dart';
 
 class MostPopular extends StatelessWidget {
   final _list = Travel.generateMostPopular();
