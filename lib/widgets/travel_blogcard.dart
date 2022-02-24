@@ -28,7 +28,7 @@ class TravelBlogCard extends StatelessWidget {
                   child: Image.asset(
                     travel.url,
                     width: MediaQuery.of(context).size.width,
-                    fit: BoxFit.cover,
+                    fit: BoxFit.fill,
                   ),
                 ),
               ),
