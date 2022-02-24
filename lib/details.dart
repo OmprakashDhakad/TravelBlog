@@ -13,7 +13,10 @@ class DetailPage extends StatelessWidget {
         body: Stack(children: [
       CustomScrollView(
         slivers: [
-          _buildSilverHead()
+          _buildSilverHead(),
+          SliverToBoxAdapter(
+            child: _buildDetail(),
+          )
         ],
       ),
       Padding(
@@ -44,6 +47,31 @@ class DetailPage extends StatelessWidget {
 
   Widget _buildSilverHead() {
     return SliverPersistentHeader(delegate: DetaileSliverDelegate(travel: travel, expandedHeight: expandedHeight, roundedContainerHeight: roundedContainerHeight));
+  }
+
+  Widget _buildDetail() {
+    return Container(
+        color: Colors.white,
+        child: Column(children: [
+          _buildUserInfo(),
+        ]));
+  }
+
+  Widget _buildUserInfo() {
+    return Row(children: [
+      ClipRRect(
+        borderRadius: BorderRadius.circular(50),
+        child: Image.asset(travel.url, width: 50, height: 50, fit: BoxFit.cover),
+      ),
+      Padding(
+        padding: const EdgeInsets.only(left: 8.0),
+        child: Column(children: [
+          Text(travel.name, style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+          Text(travel.location, style: TextStyle(fontSize: 16)),
+        ]),
+      ),
+      Icon(Icons.share, color: Colors.grey)
+    ]);
   }
 }
 
