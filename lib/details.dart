@@ -17,7 +17,7 @@ class DetailPage extends StatelessWidget {
         ],
       ),
       Padding(
-        padding: const EdgeInsets.only(top: MediaQuery.of(context).padding.top),
+        padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top),
         child: SizedBox(
             height: kToolbarHeight,
             child: Row(
