@@ -15,7 +15,21 @@ class DetailPage extends StatelessWidget {
         slivers: [
           _buildSilverHead()
         ],
-      )
+      ),
+      SizedBox(
+          height: kToolbarHeight,
+          child: Row(
+            children: [
+              Icon(
+                Icons.arrow_back_ios,
+                color: Colors.white,
+              ),
+              Icon(
+                Icons.menu,
+                color: Colors.white,
+              ),
+            ],
+          ))
     ]));
   }
 
