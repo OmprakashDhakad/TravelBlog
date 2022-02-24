@@ -52,31 +52,34 @@ class DetailPage extends StatelessWidget {
   Widget _buildDetail() {
     return Container(
         color: Colors.white,
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
-          child: Column(children: [
-            _buildUserInfo(),
-            Text('In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before the final copy is', style: TextStyle(color: Colors.grey, fontSize: 16))
-          ]),
-        ));
+        child: Column(children: [
+          _buildUserInfo(),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+            child: Text('In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before the final copy is', style: TextStyle(color: Colors.grey, fontSize: 16)),
+          )
+        ]));
   }
 
   Widget _buildUserInfo() {
-    return Row(children: [
-      ClipRRect(
-        borderRadius: BorderRadius.circular(50),
-        child: Image.asset(travel.url, width: 50, height: 50, fit: BoxFit.cover),
-      ),
-      Padding(
-        padding: const EdgeInsets.only(left: 10.0),
-        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Text(travel.name, style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-          Text(travel.location, style: TextStyle(fontSize: 16)),
-        ]),
-      ),
-      Spacer(),
-      Icon(Icons.share, color: Colors.grey)
-    ]);
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+      child: Row(children: [
+        ClipRRect(
+          borderRadius: BorderRadius.circular(50),
+          child: Image.asset(travel.url, width: 50, height: 50, fit: BoxFit.cover),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(left: 10.0),
+          child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Text(travel.name, style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+            Text(travel.location, style: TextStyle(fontSize: 16)),
+          ]),
+        ),
+        Spacer(),
+        Icon(Icons.share, color: Colors.grey)
+      ]),
+    );
   }
 }
 
