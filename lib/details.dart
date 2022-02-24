@@ -66,9 +66,13 @@ class DetailPage extends StatelessWidget {
             ]),
           ),
           SizedBox(
-            height: 160,
+            height: 120,
             child: FeaturedWidget(),
-          )
+          ),
+          Padding(
+            padding: EdgeInsets.all(15),
+            child: Text('In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before the final copy is', style: TextStyle(color: Colors.grey, fontSize: 16, height: 1.5)),
+          ),
         ]));
   }
 
@@ -104,7 +108,7 @@ class FeaturedWidget extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       itemBuilder: (context, index) {
         var travel = _list[index];
-        return Container(height: 100, width: 120, child: Image.asset(travel.url, fit: BoxFit.cover));
+        return Container(width: 120, child: Image.asset(travel.url, fit: BoxFit.cover));
       },
       separatorBuilder: (_, index) => SizedBox(width: 10),
       itemCount: _list.length,
