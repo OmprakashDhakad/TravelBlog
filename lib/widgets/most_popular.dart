@@ -23,7 +23,7 @@ class MostPopular extends StatelessWidget {
                   child: Image.asset(
                     travel.url,
                     width: 140,
-                    height: 120,
+                    height: 140,
                     fit: BoxFit.fill,
                   )),
               Positioned(
