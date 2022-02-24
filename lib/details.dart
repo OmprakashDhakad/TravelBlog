@@ -64,12 +64,13 @@ class DetailPage extends StatelessWidget {
         child: Image.asset(travel.url, width: 50, height: 50, fit: BoxFit.cover),
       ),
       Padding(
-        padding: const EdgeInsets.only(left: 8.0),
-        child: Column(children: [
+        padding: const EdgeInsets.only(left: 10.0),
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Text(travel.name, style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
           Text(travel.location, style: TextStyle(fontSize: 16)),
         ]),
       ),
+      Spacer(),
       Icon(Icons.share, color: Colors.grey)
     ]);
   }
