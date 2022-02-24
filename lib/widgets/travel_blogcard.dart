@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-//import 'package:app/model/travel.dart';
-import '/root/app/lib/model/travel.dart';
+import 'package:app/model/travel.dart';
+//import '/root/app/lib/model/travel.dart';
 import '../details.dart';
 
 class TravelBlogCard extends StatelessWidget {
