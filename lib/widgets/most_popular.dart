@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:app/model/travel.dart';
 import '../details.dart';
+//import '/root/app/lib/model/travel.dart';
 
 class MostPopular extends StatelessWidget {
   final _list = Travel.generateMostPopular();
@@ -22,7 +23,8 @@ class MostPopular extends StatelessWidget {
                   child: Image.asset(
                     travel.url,
                     width: 140,
-                    fit: BoxFit.cover,
+                    height: MediaQuery.of(context).size.height * 0.25,
+                    fit: BoxFit.fill,
                   )),
               Positioned(
                   bottom: 20,

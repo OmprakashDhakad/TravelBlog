@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:app/model/travel.dart';
-
+//import '/root/app/lib/model/travel.dart';
 import '../details.dart';
 
 class TravelBlogCard extends StatelessWidget {
@@ -28,7 +28,8 @@ class TravelBlogCard extends StatelessWidget {
                   child: Image.asset(
                     travel.url,
                     width: MediaQuery.of(context).size.width,
-                    fit: BoxFit.cover,
+                    height: MediaQuery.of(context).size.height * 0.50,
+                    fit: BoxFit.fill,
                   ),
                 ),
               ),
