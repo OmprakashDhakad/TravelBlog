@@ -33,7 +33,16 @@ class DetaileSliverDelegate extends SliverPersistentHeaderDelegate {
   Widget build(BuildContext context, double shrinkOffset, bool overlapsContent) {
     return Stack(
       children: [
-        Opacity(opacity: 0.8, child: Image.asset(travel.url, width: MediaQuery.of(context).size.width, height: expandedHeight, fit: BoxFit.cover))
+        Opacity(opacity: 0.8, child: Image.asset(travel.url, width: MediaQuery.of(context).size.width, height: expandedHeight, fit: BoxFit.cover)),
+        Positioned(
+          top: expandedHeight - roundedContainerHeight - shrinkOffset,
+          left: 0,
+          child: Container(
+            width: MediaQuery.of(context).size.width,
+            height: roundedContainerHeight,
+            decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.only(topLeft: Radius.circular(30), topRight: Radius.circular(30))),
+          ),
+        )
       ],
     );
   }
