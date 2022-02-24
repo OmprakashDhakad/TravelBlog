@@ -21,6 +21,7 @@ class DetailPage extends StatelessWidget {
         child: SizedBox(
             height: kToolbarHeight,
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Icon(
                   Icons.arrow_back_ios,
