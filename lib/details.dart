@@ -66,7 +66,7 @@ class DetailPage extends StatelessWidget {
             ]),
           ),
           SizedBox(
-            height: 120,
+            height: 160,
             child: FeaturedWidget(),
           )
         ]));
