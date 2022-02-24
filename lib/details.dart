@@ -64,6 +64,10 @@ class DetailPage extends StatelessWidget {
               Text('Featured', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, letterSpacing: 1.5)),
               Text('View all', style: TextStyle(color: Colors.deepOrange, fontSize: 16)),
             ]),
+          ),
+          SizedBox(
+            height : 120,
+            child : FeaturedWidget(),
           )
         ]));
   }
@@ -86,6 +90,23 @@ class DetailPage extends StatelessWidget {
         Spacer(),
         Icon(Icons.share, color: Colors.grey)
       ]),
+    );
+  }
+}
+
+class FeaturedWidget extends StatelessWidget {
+  final _list = Travel.generateMostPopular();
+  
+  @override
+  Widget build(BuildContext context) {
+    return ListView.separated(
+      scrollDirection: Axis.horizontal,
+      itemBuilder : (context, index) {
+        var travel = _list[index],
+        return Container(height: 100,width :120,child : Image.asset(travel.url,fit:BoxFit.cover));
+      },
+      separatorBuilder: (_,index) => SizedBox(width :10),
+      itemCount: _list.length,
     );
   }
 }
