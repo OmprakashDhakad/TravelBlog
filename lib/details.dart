@@ -16,20 +16,23 @@ class DetailPage extends StatelessWidget {
           _buildSilverHead()
         ],
       ),
-      SizedBox(
-          height: kToolbarHeight,
-          child: Row(
-            children: [
-              Icon(
-                Icons.arrow_back_ios,
-                color: Colors.white,
-              ),
-              Icon(
-                Icons.menu,
-                color: Colors.white,
-              ),
-            ],
-          ))
+      Padding(
+        padding: const EdgeInsets.only(top: MediaQuery.of(context).padding.top),
+        child: SizedBox(
+            height: kToolbarHeight,
+            child: Row(
+              children: [
+                Icon(
+                  Icons.arrow_back_ios,
+                  color: Colors.white,
+                ),
+                Icon(
+                  Icons.menu,
+                  color: Colors.white,
+                ),
+              ],
+            )),
+      )
     ]));
   }
 
